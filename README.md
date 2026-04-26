@@ -15,6 +15,8 @@ The repository also includes two unmasked baselines (Cara A and
 Cara B) used in the paper to characterise the cost of masking.
 
 ## Repository structure
+
+```
 bastion-ntt/
 ├── rtl/
 │   ├── caraA/             Single-BFU baseline (Cara A)
@@ -24,6 +26,7 @@ bastion-ntt/
 ├── tvla/                  Trace generation and TVLA analysis scripts
 ├── scripts/               Build and run helpers
 └── paper/figures/         Architecture figures
+```
 
 ## Requirements
 
