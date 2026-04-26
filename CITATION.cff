@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+title: "BASTION: A Side-Channel Hardened NTT Accelerator for ML-KEM on FPGA"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: "Lázaro Díaz"
+    given-names: "Marcos"
+    affiliation: "Polytechnical University of Madrid"
+    email: "marcoslazarodiaz@gmail.com"
+repository-code: "https://github.com/m-lazaro/bastion-ntt"
+abstract: >-
+  First-order arithmetic masked Number Theoretic Transform (NTT)
+  accelerator for ML-KEM on FPGA. The masked datapath uses spatially
+  separated share domains, eliminating cross-domain combinational
+  paths during NTT computation.
+keywords:
+  - "post-quantum cryptography"
+  - "ML-KEM"
+  - "Number Theoretic Transform"
+  - "side-channel analysis"
+  - "first-order masking"
+  - "Domain-Oriented Masking"
+  - "FPGA"
+  - "TVLA"
+license: Apache-2.0

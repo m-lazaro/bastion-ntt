@@ -1,0 +1,70 @@
+# === Simulación Verilog ===
+*.vcd
+*.fst
+*.lxt
+*.lxt2
+sim_*
+!sim_*.sh
+*.vvp
+*.out
+
+# === Vivado ===
+*.jou
+*.log
+*.str
+*.pb
+*.wdb
+*.html
+*.xml
+*.dcp
+*.bit
+*.ltx
+.Xil/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.srcs/
+vivado*.log
+vivado*.jou
+hs_err_*.log
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# === TVLA outputs (regenerables) ===
+tvla_traces.csv
+tvla_tvalues_*.csv
+tvla_evolution.csv
+tvla_evolution.pdf
+tvla_evolution.png
+tvla_plot.png
+tvla_plot.pdf
+
+# === Sistema ===
+.DS_Store
+Thumbs.db
+*~
+.swp
+.swo
+
+# === IDEs ===
+.vscode/
+.idea/
+*.code-workspace
+
+# === LaTeX ===
+*.aux
+*.bbl
+*.blg
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
