@@ -82,3 +82,10 @@ Thumbs.db
 **/seeds.txt
 # === Trazas crudas grandes (se regeneran) ===
 **/tvla_traces*.csv
+
+
+# Excepción: los t-values finales sí van al repo (pequeños, reproducen las figuras)
+!**/tvla_tvalues_s0_RTL30k_v3.csv
+!**/tvla_tvalues_s1_RTL30k_v3.csv
+!**/tvla_tvalues_s0_merged.csv
+!**/tvla_tvalues_s1_merged.csv
