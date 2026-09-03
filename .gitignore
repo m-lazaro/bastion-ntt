@@ -68,3 +68,17 @@ Thumbs.db
 *.synctex.gz
 *.fdb_latexmk
 *.fls
+
+# === Vivado xsim working dir (en cualquier subruta) ===
+**/xsim.dir/
+**/*.wdb
+**/*.pb
+# === Netlists de timing (se regeneran) ===
+**/netlist_timesim.*
+# === Campaña paralela (logs y binarios) ===
+**/job_*.log
+**/campaign.log
+**/check.log
+**/seeds.txt
+# === Trazas crudas grandes (se regeneran) ===
+**/tvla_traces*.csv
