@@ -1,34 +1,30 @@
 #!/usr/bin/env bash
-# Full TVLA pipeline for BASTION:
-#   1. Generate 30,000 traces (~536 MB) via Icarus Verilog testbench.
-#   2. Compute Welch t-statistic per cycle (tvla_analyze.py).
-#   3. Compute scaling-law evolution plot (tvla_evolution.py).
-
+# TVLA pipeline for BASTION (parallel / sufficient-statistics flow).
+# SUPERSEDED: earlier methodology (per-domain toggle traces, first order
+# only). Kept for reproducibility of the earlier version.
+#
+# The testbench accumulates (n, sum, sum-of-squares) per cycle per group
+# and emits ~200 kB of partial statistics per job, NOT raw traces.
+# Merging the per-job partials yields the exact Welch t-statistic.
+#
+# For a 30,000-trace campaign, run several jobs with far-apart LCG seeds
+# (see gen_seeds.py) and merge (see merge_tvla.py). This script runs a
+# single job as a smoke test; edit N_TRACES / seeds for a full campaign.
 set -euo pipefail
-
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 BASTION_DIR="$REPO_ROOT/rtl/bastion"
-TVLA_DIR="$REPO_ROOT/tvla"
 
-echo "==> Compiling BASTION TVLA testbench..."
+echo "==> Compiling BASTION parallel TVLA testbench..."
 cd "$BASTION_DIR"
-iverilog -o sim_tvla tb_tvla.v butterfly.v memory.v memory_bank.v \
+iverilog -o sim_tvla tb_tvla_parallel.v butterfly.v memory.v memory_bank.v \
                      lfsr16.v ntt_controller.v ntt_top.v twiddle_rom.v
 
-echo "==> Generating traces (this takes ~30-60 min and ~536 MB of disk)..."
-./sim_tvla
-
-echo "==> Running TVLA per-cycle analysis..."
-cd "$TVLA_DIR"
-python3 tvla_analyze.py "$BASTION_DIR/tvla_traces.csv"
-
-echo "==> Running TVLA scaling-law analysis..."
-python3 tvla_evolution.py "$BASTION_DIR/tvla_traces.csv"
+echo "==> Running one TVLA job (smoke test)..."
+vvp sim_tvla +SEED_IN=cafebabe +SEED_SH=deadbeef +JOB=0
 
 echo ""
-echo "==> Done. Expected outputs:"
-echo "    - tvla_plot.{pdf,png}        (Fig. 4 of paper)"
-echo "    - tvla_evolution.{pdf,png}   (Fig. 5 of paper)"
-echo "    - tvla_evolution.csv         (raw checkpoints)"
-echo ""
-echo "==> Expected result: max|t| = 3.961 < 4.5 (PASS)"
+echo "==> Output: tvla_partial_0.csv"
+echo "==> For a full 30k campaign: see gen_seeds.py, run_parallel.sh, merge_tvla.py in ../tvla/"
+echo "==> NOTE: this is the earlier per-domain, first-order methodology. It is"
+echo "==> superseded by the whole-design harness of the revised paper and is"
+echo "==> kept only to reproduce the earlier version."

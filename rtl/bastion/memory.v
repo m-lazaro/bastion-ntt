@@ -26,7 +26,7 @@ module memory (
 
     (* ram_style = "block" *) reg signed [15:0] mem [0:255];
 
-    // Port A: write-first
+  
     always @(posedge clk) begin
         if (we_a)
             mem[addr_a] <= din_a;

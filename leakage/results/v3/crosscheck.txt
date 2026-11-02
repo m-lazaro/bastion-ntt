@@ -1,0 +1,7 @@
+lockstep    {}           identical traces True, identical read-backs True, shape (101360,)
+c1          {}           identical traces False, identical read-backs True, shape (101360,)
+c2          {}           identical traces True, identical read-backs True, shape (101360,)
+baseline_b  {}           identical traces True, identical read-backs True, shape (56440,)
+staggered   {'delta': 9} identical traces True, identical read-backs True, shape (101540,)
+staggered   {'delta': 576} identical traces True, identical read-backs True, shape (112880,)
+sequential  {}           identical traces True, identical read-backs True, shape (182020,)

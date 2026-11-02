@@ -1,0 +1,209 @@
+BASTION separation checks
+domain 0 filter: NAME =~ s0_* || NAME =~ bf0/* || NAME =~ bf1/* || NAME =~ rd0_q_reg*
+domain 1 filter: NAME =~ s1_* || NAME =~ bf2/* || NAME =~ bf3/* || NAME =~ rd1_q_reg*
+
+sequential cells: domain 0 = 472, domain 1 = 472, outside = 233, total = 1177
+Q1 paths domain 0 to domain 1: 0
+Q1 paths domain 1 to domain 0: 0
+Q2 paths from a domain to cells outside both: 0
+Q3 mixed-cone primitives: EXPECTED (read registers only) = 32, UNEXPECTED = 0
+   EXPECTED   ext_data_r_OBUF[0]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[0]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[10]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[10]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[11]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[11]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[12]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[12]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[13]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[13]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[14]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[14]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[15]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[15]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[1]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[1]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[2]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[2]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[3]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[3]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[4]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[4]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[5]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[5]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[6]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[6]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[7]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[7]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[8]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[8]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[9]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[9]_inst_i_1 (LUT3)
+
+Q4 check_timing (verbose) follows.
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
+| Date         : Fri Oct 23 01:14:14 2026
+| Command      : check_timing -verbose -file build/reports/sep_bastion_stag_5.300.rpt -append
+| Design       : ntt_top
+| Device       : 7a200t-fbg676
+| Speed File   : -2  PRODUCTION 1.23 2018-06-13
+-------------------------------------------------------------------------------------------
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (51)
+6. checking no_output_delay (17)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (51)
+-------------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 51 input ports with no input delay but user has a false path constraint. (MEDIUM)
+
+delta[0]
+delta[10]
+delta[11]
+delta[12]
+delta[1]
+delta[2]
+delta[3]
+delta[4]
+delta[5]
+delta[6]
+delta[7]
+delta[8]
+delta[9]
+ext_addr_r[0]
+ext_addr_r[1]
+ext_addr_r[2]
+ext_addr_r[3]
+ext_addr_r[4]
+ext_addr_r[5]
+ext_addr_r[6]
+ext_addr_r[7]
+ext_addr_w[0]
+ext_addr_w[1]
+ext_addr_w[2]
+ext_addr_w[3]
+ext_addr_w[4]
+ext_addr_w[5]
+ext_addr_w[6]
+ext_addr_w[7]
+ext_data_w[0]
+ext_data_w[10]
+ext_data_w[11]
+ext_data_w[12]
+ext_data_w[13]
+ext_data_w[14]
+ext_data_w[15]
+ext_data_w[1]
+ext_data_w[2]
+ext_data_w[3]
+ext_data_w[4]
+ext_data_w[5]
+ext_data_w[6]
+ext_data_w[7]
+ext_data_w[8]
+ext_data_w[9]
+ext_re
+ext_share_sel
+ext_we
+order_rand
+rst
+start
+
+
+6. checking no_output_delay (17)
+--------------------------------
+ There are 0 ports with no output delay specified.
+
+ There are 17 ports with no output delay but user has a false path constraint (MEDIUM)
+
+done
+ext_data_r[0]
+ext_data_r[10]
+ext_data_r[11]
+ext_data_r[12]
+ext_data_r[13]
+ext_data_r[14]
+ext_data_r[15]
+ext_data_r[1]
+ext_data_r[2]
+ext_data_r[3]
+ext_data_r[4]
+ext_data_r[5]
+ext_data_r[6]
+ext_data_r[7]
+ext_data_r[8]
+ext_data_r[9]
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+

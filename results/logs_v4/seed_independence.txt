@@ -1,0 +1,4 @@
+--job  500: traces (2000, 5070) sha256 998f6ffff6e09764, groups sha256 e321daf521004dfc
+--job 1000: traces (2000, 5070) sha256 998f6ffff6e09764, groups sha256 e321daf521004dfc
+--job 2000: traces (2000, 5070) sha256 998f6ffff6e09764, groups sha256 e321daf521004dfc
+identical traces and groups for every job size: True

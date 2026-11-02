@@ -1,0 +1,169 @@
+{
+ "lockstep": {
+  "pairs": 5,
+  "window": 5070,
+  "t2u": {
+   "detected_samples_pooled": 1522,
+   "outside_support_view": 0,
+   "outside_form_view": 0,
+   "flagged_support": 4034,
+   "flagged_form": 4034,
+   "flagged_support_fraction": 0.7956607495069034,
+   "flagged_form_fraction": 0.7956607495069034
+  }
+ },
+ "staggered_d1": {
+  "pairs": 5,
+  "window": 5071,
+  "t2u": {
+   "detected_samples_pooled": 667,
+   "outside_support_view": 0,
+   "outside_form_view": 0,
+   "flagged_support": 4033,
+   "flagged_form": 4033,
+   "flagged_support_fraction": 0.7953066456320252,
+   "flagged_form_fraction": 0.7953066456320252
+  },
+  "t2b": {
+   "detected_samples_pooled": 1031,
+   "outside_support_view": 0,
+   "outside_form_view": 0,
+   "flagged_support": 4034,
+   "flagged_form": 4034,
+   "flagged_support_fraction": 0.7956607495069034,
+   "flagged_form_fraction": 0.7956607495069034
+  }
+ },
+ "staggered_d4": {
+  "pairs": 5,
+  "window": 5074,
+  "t2u": {
+   "detected_samples_pooled": 112,
+   "outside_support_view": 0,
+   "outside_form_view": 0,
+   "flagged_support": 4030,
+   "flagged_form": 4030,
+   "flagged_support_fraction": 0.7942451714623571,
+   "flagged_form_fraction": 0.7942451714623571
+  },
+  "t2b": {
+   "detected_samples_pooled": 914,
+   "outside_support_view": 0,
+   "outside_form_view": 0,
+   "flagged_support": 4044,
+   "flagged_form": 4042,
+   "flagged_support_fraction": 0.7976331360946746,
+   "flagged_form_fraction": 0.7972386587771203
+  }
+ },
+ "staggered_d9": {
+  "pairs": 5,
+  "window": 5079,
+  "t2u": {
+   "detected_samples_pooled": 11,
+   "outside_support_view": 0,
+   "outside_form_view": 5,
+   "flagged_support": 2939,
+   "flagged_form": 2684,
+   "flagged_support_fraction": 0.578657215987399,
+   "flagged_form_fraction": 0.528450482378421
+  },
+  "t2b": {
+   "detected_samples_pooled": 1008,
+   "outside_support_view": 0,
+   "outside_form_view": 0,
+   "flagged_support": 4063,
+   "flagged_form": 4062,
+   "flagged_support_fraction": 0.8013806706114398,
+   "flagged_form_fraction": 0.8011834319526627
+  }
+ },
+ "staggered_d18": {
+  "pairs": 5,
+  "window": 5088,
+  "t2u": {
+   "detected_samples_pooled": 8,
+   "outside_support_view": 0,
+   "outside_form_view": 8,
+   "flagged_support": 1262,
+   "flagged_form": 0,
+   "flagged_support_fraction": 0.24803459119496854,
+   "flagged_form_fraction": 0.0
+  },
+  "t2b": {
+   "detected_samples_pooled": 1004,
+   "outside_support_view": 0,
+   "outside_form_view": 0,
+   "flagged_support": 4090,
+   "flagged_form": 4083,
+   "flagged_support_fraction": 0.8067061143984221,
+   "flagged_form_fraction": 0.8053254437869822
+  }
+ },
+ "staggered_d576": {
+  "pairs": 5,
+  "window": 5646,
+  "t2u": {
+   "detected_samples_pooled": 48,
+   "outside_support_view": 0,
+   "outside_form_view": 0,
+   "flagged_support": 1838,
+   "flagged_form": 1814,
+   "flagged_support_fraction": 0.3255402054551895,
+   "flagged_form_fraction": 0.32128940843074744
+  },
+  "t2b": {
+   "detected_samples_pooled": 1176,
+   "outside_support_view": 0,
+   "outside_form_view": 0,
+   "flagged_support": 4557,
+   "flagged_form": 4067,
+   "flagged_support_fraction": 0.8988165680473372,
+   "flagged_form_fraction": 0.8021696252465483
+  }
+ },
+ "staggered_d4034": {
+  "pairs": 5,
+  "window": 9104,
+  "t2u": {
+   "detected_samples_pooled": 0,
+   "outside_support_view": 0,
+   "outside_form_view": 0,
+   "flagged_support": 0,
+   "flagged_form": 0,
+   "flagged_support_fraction": 0.0,
+   "flagged_form_fraction": 0.0
+  },
+  "t2b": {
+   "detected_samples_pooled": 2077,
+   "outside_support_view": 0,
+   "outside_form_view": 0,
+   "flagged_support": 5062,
+   "flagged_form": 4034,
+   "flagged_support_fraction": 0.998422090729783,
+   "flagged_form_fraction": 0.7956607495069034
+  }
+ },
+ "sequential": {
+  "pairs": 5,
+  "window": 9105,
+  "t2u": {
+   "detected_samples_pooled": 0,
+   "outside_support_view": 0,
+   "outside_form_view": 0,
+   "flagged_support": 0,
+   "flagged_form": 0,
+   "flagged_support_fraction": 0.0,
+   "flagged_form_fraction": 0.0
+  },
+  "t2b": {
+   "detected_samples_pooled": 2075,
+   "outside_support_view": 0,
+   "outside_form_view": 0,
+   "flagged_support": 4293,
+   "flagged_form": 4035,
+   "flagged_support_fraction": 0.8467455621301775,
+   "flagged_form_fraction": 0.7958579881656804
+  }
+ }
+}

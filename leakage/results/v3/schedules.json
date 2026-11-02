@@ -1,0 +1,362 @@
+{
+ "lockstep": {
+  "traces": [
+   10000,
+   10000
+  ],
+  "t1": {
+   "max": [
+    3.6036209435942768,
+    4.071069328524851
+   ],
+   "min_of_max": 3.6036209435942768,
+   "detected": 0,
+   "first_detected": null
+  },
+  "t2u": {
+   "max": [
+    11.072659957181473,
+    10.035298269381423
+   ],
+   "min_of_max": 10.035298269381423,
+   "detected": 97,
+   "first_detected": 532,
+   "outside_support_view": 0,
+   "outside_form_view": 0,
+   "inside_form_view": 97
+  },
+  "flagged_univariate": {
+   "forms": 4034,
+   "supports": 4034
+  }
+ },
+ "staggered_d1": {
+  "traces": [
+   10000,
+   10000
+  ],
+  "t1": {
+   "max": [
+    3.957400897852152,
+    4.11936052404357
+   ],
+   "min_of_max": 3.957400897852152,
+   "detected": 0,
+   "first_detected": null
+  },
+  "t2u": {
+   "max": [
+    7.683795413692966,
+    7.724491773333965
+   ],
+   "min_of_max": 7.683795413692966,
+   "detected": 12,
+   "first_detected": 626,
+   "outside_support_view": 0,
+   "outside_form_view": 0,
+   "inside_form_view": 12
+  },
+  "t2b": {
+   "max": [
+    7.826181959014507,
+    9.002581780271278
+   ],
+   "min_of_max": 7.826181959014507,
+   "detected": 29,
+   "first_detected": 583,
+   "outside_support_view": 0,
+   "outside_form_view": 0,
+   "inside_form_view": 29
+  },
+  "flagged_univariate": {
+   "forms": 4034,
+   "supports": 4034
+  },
+  "flagged_bivariate": {
+   "forms": 4035,
+   "supports": 4035
+  }
+ },
+ "staggered_d4": {
+  "traces": [
+   10000,
+   10000
+  ],
+  "t1": {
+   "max": [
+    3.4828280146991624,
+    3.8550454475308165
+   ],
+   "min_of_max": 3.4828280146991624,
+   "detected": 0,
+   "first_detected": null
+  },
+  "t2u": {
+   "max": [
+    4.3793857176712585,
+    5.302434129463225
+   ],
+   "min_of_max": 4.3793857176712585,
+   "detected": 0,
+   "first_detected": null,
+   "outside_support_view": 0,
+   "outside_form_view": 0,
+   "inside_form_view": 0
+  },
+  "t2b": {
+   "max": [
+    10.68603979315375,
+    10.880421630019915
+   ],
+   "min_of_max": 10.68603979315375,
+   "detected": 29,
+   "first_detected": 546,
+   "outside_support_view": 0,
+   "outside_form_view": 0,
+   "inside_form_view": 29
+  },
+  "flagged_univariate": {
+   "forms": 4031,
+   "supports": 4031
+  },
+  "flagged_bivariate": {
+   "forms": 4043,
+   "supports": 4045
+  }
+ },
+ "staggered_d9": {
+  "traces": [
+   10000,
+   10000
+  ],
+  "t1": {
+   "max": [
+    3.583422473249989,
+    3.6780105587791403
+   ],
+   "min_of_max": 3.583422473249989,
+   "detected": 0,
+   "first_detected": null
+  },
+  "t2u": {
+   "max": [
+    3.766136774305115,
+    4.848101218885838
+   ],
+   "min_of_max": 3.766136774305115,
+   "detected": 0,
+   "first_detected": null,
+   "outside_support_view": 0,
+   "outside_form_view": 0,
+   "inside_form_view": 0
+  },
+  "t2b": {
+   "max": [
+    10.50641619043846,
+    7.620184402775118
+   ],
+   "min_of_max": 7.620184402775118,
+   "detected": 16,
+   "first_detected": 615,
+   "outside_support_view": 0,
+   "outside_form_view": 0,
+   "inside_form_view": 16
+  },
+  "flagged_univariate": {
+   "forms": 2685,
+   "supports": 2940
+  },
+  "flagged_bivariate": {
+   "forms": 4063,
+   "supports": 4064
+  }
+ },
+ "staggered_d18": {
+  "traces": [
+   10000,
+   10000
+  ],
+  "t1": {
+   "max": [
+    3.947823087348283,
+    3.780987625555775
+   ],
+   "min_of_max": 3.780987625555775,
+   "detected": 0,
+   "first_detected": null
+  },
+  "t2u": {
+   "max": [
+    4.225320029163959,
+    4.019115938900531
+   ],
+   "min_of_max": 4.019115938900531,
+   "detected": 0,
+   "first_detected": null,
+   "outside_support_view": 0,
+   "outside_form_view": 0,
+   "inside_form_view": 0
+  },
+  "t2b": {
+   "max": [
+    8.363553167321433,
+    9.856308276437229
+   ],
+   "min_of_max": 8.363553167321433,
+   "detected": 23,
+   "first_detected": 524,
+   "outside_support_view": 0,
+   "outside_form_view": 0,
+   "inside_form_view": 23
+  },
+  "flagged_univariate": {
+   "forms": 1,
+   "supports": 1263
+  },
+  "flagged_bivariate": {
+   "forms": 4083,
+   "supports": 4091
+  }
+ },
+ "staggered_d576": {
+  "traces": [
+   10000,
+   10000
+  ],
+  "t1": {
+   "max": [
+    4.438753939220875,
+    3.5742136070507233
+   ],
+   "min_of_max": 3.5742136070507233,
+   "detected": 0,
+   "first_detected": null
+  },
+  "t2u": {
+   "max": [
+    6.054477142173952,
+    4.971298978873445
+   ],
+   "min_of_max": 4.971298978873445,
+   "detected": 1,
+   "first_detected": 1479,
+   "outside_support_view": 0,
+   "outside_form_view": 0,
+   "inside_form_view": 1
+  },
+  "t2b": {
+   "max": [
+    10.092564176726214,
+    10.525841269385156
+   ],
+   "min_of_max": 10.092564176726214,
+   "detected": 45,
+   "first_detected": 523,
+   "outside_support_view": 0,
+   "outside_form_view": 0,
+   "inside_form_view": 45
+  },
+  "flagged_univariate": {
+   "forms": 1815,
+   "supports": 1839
+  },
+  "flagged_bivariate": {
+   "forms": 4048,
+   "supports": 4298
+  }
+ },
+ "staggered_d4034": {
+  "traces": [
+   10000,
+   10000
+  ],
+  "t1": {
+   "max": [
+    3.9403191742975117,
+    4.14667665689667
+   ],
+   "min_of_max": 3.9403191742975117,
+   "detected": 0,
+   "first_detected": null
+  },
+  "t2u": {
+   "max": [
+    3.8148927539366895,
+    4.2507135502640185
+   ],
+   "min_of_max": 3.8148927539366895,
+   "detected": 0,
+   "first_detected": null,
+   "outside_support_view": 0,
+   "outside_form_view": 0,
+   "inside_form_view": 0
+  },
+  "t2b": {
+   "max": [
+    15.345492619377671,
+    13.645455892568444
+   ],
+   "min_of_max": 13.645455892568444,
+   "detected": 246,
+   "first_detected": 520,
+   "outside_support_view": 0,
+   "outside_form_view": 0,
+   "inside_form_view": 246
+  },
+  "flagged_univariate": {
+   "forms": 1,
+   "supports": 1
+  },
+  "flagged_bivariate": {
+   "forms": 4034,
+   "supports": 4547
+  }
+ },
+ "sequential": {
+  "traces": [
+   10000,
+   10000
+  ],
+  "t1": {
+   "max": [
+    3.972148873980613,
+    4.114223852534592
+   ],
+   "min_of_max": 3.972148873980613,
+   "detected": 0,
+   "first_detected": null
+  },
+  "t2u": {
+   "max": [
+    3.865013570347757,
+    3.87516481135535
+   ],
+   "min_of_max": 3.865013570347757,
+   "detected": 0,
+   "first_detected": null,
+   "outside_support_view": 0,
+   "outside_form_view": 0,
+   "inside_form_view": 0
+  },
+  "t2b": {
+   "max": [
+    16.65411385244645,
+    14.869570569174542
+   ],
+   "min_of_max": 14.869570569174542,
+   "detected": 243,
+   "first_detected": 520,
+   "outside_support_view": 0,
+   "outside_form_view": 0,
+   "inside_form_view": 243
+  },
+  "flagged_univariate": {
+   "forms": 0,
+   "supports": 3
+  },
+  "flagged_bivariate": {
+   "forms": 4035,
+   "supports": 4292
+  }
+ }
+}

@@ -10,14 +10,31 @@
 //   Share 0: s0_even_bank + s0_odd_bank → BFU0 (even) + BFU1 (odd)
 //   Share 1: s1_even_bank + s1_odd_bank → BFU2 (even) + BFU3 (odd)
 //
-// SECURITY ARGUMENT:
-//   No combinational path connects share0 data to share1 data.
-//   Each BFU processes exactly one share. Each memory bank stores
-//   exactly one share. The twiddle factor (zeta) is PUBLIC and
-//   identical for both shares — this is safe because zeta carries
-//   no secret information. Under the d-probing model (d=1), any
-//   single probed wire reveals at most one share, which is
-//   statistically independent of the unmasked value.
+// SECURITY ARGUMENT (revised read-back path):
+//   Each BFU processes exactly one share and each memory bank stores
+//   exactly one share. The twiddle factor (zeta), the addresses, the
+//   shuffle and the dummy operands are public and common to both
+//   domains. The only cell with inputs from both domains is the 2:1
+//   multiplexer that drives ext_data_r, and its data inputs are the
+//   per-domain read registers rd0_q and rd1_q. Each register loads only
+//   when done, ext_re and its own share select are asserted, and holds
+//   zero otherwise, so both are zero during the transform and they are
+//   never non-zero in the same cycle (checked in simulation).
+//
+// INTERFACE REQUIREMENTS (the argument above relies on them):
+//   - Load share 0 with ext_share_sel=0, then share 1 with
+//     ext_share_sel=1. After the last word, drive ext_data_w and
+//     ext_addr_w to zero: the input bus reaches the write multiplexers
+//     of both domains, so no share word may stay on it while the
+//     transform runs.
+//   - Read back only after done, and not before two further clock
+//     edges: done rises while the last butterfly is still in stages
+//     four and five of the pipeline, and those edges let it drain before
+//     the first word of a share reaches a latch or a read register.
+//     Then assert ext_re and present ext_addr_r; the word appears on
+//     ext_data_r two clock edges later. Between the two shares, hold
+//     ext_re low for two cycles so that both read registers clear
+//     before the other domain is selected.
 //
 // MASKING LINEARITY:
 //   NTT is linear over Z_Q (integers mod Q=3329):
@@ -47,6 +64,7 @@ module ntt_top (
     input  wire [7:0]  ext_addr_w,
     input  wire signed [15:0] ext_data_w,
     input  wire [7:0]  ext_addr_r,
+    input  wire        ext_re,          // read-back enable (after DONE)
     output wire signed [15:0] ext_data_r
 );
 
@@ -149,7 +167,7 @@ module ntt_top (
     wire s0e_web = ctrl_we;
 
     wire [6:0] s0e_aa = s0e_ext             ? ext_phys_w :
-                        (done && !ext_share_sel && ext_r_even) ? ext_phys_r :
+                        (done && ext_re && !ext_share_sel && ext_r_even) ? ext_phys_r :
                         ctrl_we              ? pwa_even :
                                                pa_even;
     wire [6:0] s0e_ab = ctrl_we ? pwb_even : pb_even;
@@ -170,7 +188,7 @@ module ntt_top (
     wire s0o_web = ctrl_we;
 
     wire [6:0] s0o_aa = s0o_ext             ? ext_phys_w :
-                        (done && !ext_share_sel && !ext_r_even) ? ext_phys_r :
+                        (done && ext_re && !ext_share_sel && !ext_r_even) ? ext_phys_r :
                         ctrl_we              ? pwa_odd :
                                                pa_odd;
     wire [6:0] s0o_ab = ctrl_we ? pwb_odd : pb_odd;
@@ -191,7 +209,7 @@ module ntt_top (
     wire s1e_web = ctrl_we;
 
     wire [6:0] s1e_aa = s1e_ext             ? ext_phys_w :
-                        (done && ext_share_sel && ext_r_even) ? ext_phys_r :
+                        (done && ext_re && ext_share_sel && ext_r_even) ? ext_phys_r :
                         ctrl_we              ? pwa_even :
                                                pa_even;
     wire [6:0] s1e_ab = ctrl_we ? pwb_even : pb_even;
@@ -212,7 +230,7 @@ module ntt_top (
     wire s1o_web = ctrl_we;
 
     wire [6:0] s1o_aa = s1o_ext             ? ext_phys_w :
-                        (done && ext_share_sel && !ext_r_even) ? ext_phys_r :
+                        (done && ext_re && ext_share_sel && !ext_r_even) ? ext_phys_r :
                         ctrl_we              ? pwa_odd :
                                                pa_odd;
     wire [6:0] s1o_ab = ctrl_we ? pwb_odd : pb_odd;
@@ -226,12 +244,38 @@ module ntt_top (
     );
 
     // =========================================================
-    // External read mux (share_sel + even/odd)
+    // Read-back path (revised): one register per share domain
     // =========================================================
-    assign ext_data_r = (!ext_share_sel &&  ext_r_even) ? s0e_da :
-                        (!ext_share_sel && !ext_r_even) ? s0o_da :
-                        ( ext_share_sel &&  ext_r_even) ? s1e_da :
-                                                         s1o_da;
+    // Each domain's bank outputs feed only that domain's read register.
+    // A register loads only after DONE, with ext_re high and its own
+    // domain selected; the enable and the parity bit are delayed by one
+    // cycle so that the register captures the word addressed by
+    // ext_addr_r, never a stale bank output. Otherwise it holds zero.
+    // During the NTT both registers are therefore constant zero, and the
+    // final 2:1 multiplexer never receives share data from both domains.
+    // Protocol: read all of share 0, drop ext_re for two cycles (both
+    // registers clear), then select share 1 and raise ext_re again.
+    reg rd0_en_d, rd1_en_d, rd_even_d;
+    (* KEEP = "true", DONT_TOUCH = "true" *) reg signed [15:0] rd0_q;
+    (* KEEP = "true", DONT_TOUCH = "true" *) reg signed [15:0] rd1_q;
+
+    always @(posedge clk) begin
+        if (rst) begin
+            rd0_en_d  <= 1'b0;
+            rd1_en_d  <= 1'b0;
+            rd_even_d <= 1'b0;
+            rd0_q     <= 16'sd0;
+            rd1_q     <= 16'sd0;
+        end else begin
+            rd0_en_d  <= done && ext_re && !ext_share_sel;
+            rd1_en_d  <= done && ext_re &&  ext_share_sel;
+            rd_even_d <= ext_r_even;
+            rd0_q     <= rd0_en_d ? (rd_even_d ? s0e_da : s0o_da) : 16'sd0;
+            rd1_q     <= rd1_en_d ? (rd_even_d ? s1e_da : s1o_da) : 16'sd0;
+        end
+    end
+
+    assign ext_data_r = ext_share_sel ? rd1_q : rd0_q;
 
     // =========================================================
     // BUTTERFLIES — with dummy operation muxing (Level 1)

@@ -3,7 +3,7 @@
 // =============================================================
 // Used for even/odd address split within each share.
 // Physical address = logical_addr[7:1].
-// 8 instances total: 2 per share × 2 shares.
+// 4 instances total: 2 per share × 2 shares.
 //
 // SIDE-CHANNEL HARDENING ATTRIBUTES:
 //   KEEP_HIERARCHY preserves module boundaries through synthesis,

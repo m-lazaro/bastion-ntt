@@ -1,0 +1,355 @@
+BASTION separation checks
+domain 0 filter: NAME =~ s0_* || NAME =~ bf0/* || NAME =~ bf1/* || NAME =~ rd0_q_reg*
+domain 1 filter: NAME =~ s1_* || NAME =~ bf2/* || NAME =~ bf3/* || NAME =~ rd1_q_reg*
+
+sequential cells: domain 0 = 187, domain 1 = 184, outside = 206, total = 577
+Q1 paths domain 0 to domain 1: 32
+   bf1/a_s3_reg_r/C  to  bf2/a_s4_reg[12]/D
+   bf1/a_s3_reg_r/C  to  bf2/a_s4_reg[8]/D
+   bf1/a_s3_reg_r/C  to  bf2/a_s4_reg[0]/D
+   bf1/a_s3_reg_r/C  to  bf2/a_s4_reg[13]/D
+   bf1/a_s3_reg_r/C  to  bf2/a_s4_reg[9]/D
+   bf1/a_s3_reg_r/C  to  bf2/a_s4_reg[1]/D
+   bf1/a_s3_reg_r/C  to  bf2/a_s4_reg[4]/D
+   bf1/a_s3_reg_r/C  to  bf2/a_s4_reg[5]/D
+   bf1/a_s3_reg_r/C  to  bf2/a_s4_reg[2]/D
+   bf1/a_s3_reg_r/C  to  bf2/a_s4_reg[3]/D
+   bf1/a_s3_reg_r/C  to  bf3/a_s4_reg[4]/D
+   bf1/a_s3_reg_r/C  to  bf2/a_s4_reg[14]/D
+   bf1/a_s3_reg_r/C  to  bf2/a_s4_reg[6]/D
+   bf1/a_s3_reg_r/C  to  bf2/a_s4_reg[10]/D
+   bf1/a_s3_reg_r/C  to  bf3/a_s4_reg[2]/D
+   bf1/a_s3_reg_r/C  to  bf3/a_s4_reg[5]/D
+   bf1/a_s3_reg_r/C  to  bf2/a_s4_reg[7]/D
+   bf1/a_s3_reg_r/C  to  bf3/a_s4_reg[3]/D
+   bf1/a_s3_reg_r/C  to  bf2/a_s4_reg[15]/D
+   bf1/a_s3_reg_r/C  to  bf2/a_s4_reg[11]/D
+   bf1/a_s3_reg_r/C  to  bf3/a_s4_reg[0]/D
+   bf1/a_s3_reg_r/C  to  bf3/a_s4_reg[1]/D
+   bf1/a_s3_reg_r/C  to  bf3/a_s4_reg[6]/D
+   bf1/a_s3_reg_r/C  to  bf3/a_s4_reg[7]/D
+   bf1/a_s3_reg_r/C  to  bf3/a_s4_reg[10]/D
+   bf1/a_s3_reg_r/C  to  bf3/a_s4_reg[12]/D
+   bf1/a_s3_reg_r/C  to  bf3/a_s4_reg[11]/D
+   bf1/a_s3_reg_r/C  to  bf3/a_s4_reg[13]/D
+   bf1/a_s3_reg_r/C  to  bf3/a_s4_reg[8]/D
+   bf1/a_s3_reg_r/C  to  bf3/a_s4_reg[9]/D
+   bf1/a_s3_reg_r/C  to  bf3/a_s4_reg[14]/D
+   bf1/a_s3_reg_r/C  to  bf3/a_s4_reg[15]/D
+Q1 paths domain 1 to domain 0: 0
+Q2 paths from a domain to cells outside both: 64
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_25/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_16/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_27/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_6/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_20/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_11/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_8/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_17/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_23/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_31/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_3/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_26/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_30/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_21/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_28/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_12/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_18/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_29/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_13/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_7/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_22/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_14/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_24/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_2/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_19/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_9/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_10/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_15/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_1/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_4/D
+   bf0/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__0_psdsp_5/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_28/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_19/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_11/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_24/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_10/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_17/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_1/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_12/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_22/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_9/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_18/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_2/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_30/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_26/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_4/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_5/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_23/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_14/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_16/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_8/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_31/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_6/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_27/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_20/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_15/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_29/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_21/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_25/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_3/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_7/D
+   bf3/t_full_reg/CLK  to  ctrl/t_full_reg_i_1__1_psdsp_13/D
+Q3 mixed-cone primitives: EXPECTED (read registers only) = 32, UNEXPECTED = 64
+   EXPECTED   ext_data_r_OBUF[0]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[0]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[10]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[10]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[11]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[11]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[12]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[12]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[13]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[13]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[14]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[14]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[15]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[15]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[1]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[1]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[2]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[2]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[3]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[3]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[4]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[4]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[5]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[5]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[6]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[6]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[7]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[7]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[8]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[8]_inst_i_1 (LUT3)
+   EXPECTED   ext_data_r_OBUF[9]_inst (OBUF)
+   EXPECTED   ext_data_r_OBUF[9]_inst_i_1 (LUT3)
+   UNEXPECTED bf2/a_s3_reg_gate (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[15]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s3_reg_gate__0 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[14]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s3_reg_gate__1 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[13]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s3_reg_gate__10 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[4]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s3_reg_gate__11 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[3]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s3_reg_gate__12 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[2]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s3_reg_gate__13 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[1]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s3_reg_gate__14 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[0]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s3_reg_gate__2 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[12]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s3_reg_gate__3 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[11]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s3_reg_gate__4 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[10]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s3_reg_gate__5 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[9]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s3_reg_gate__6 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[8]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s3_reg_gate__7 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[7]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s3_reg_gate__8 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[6]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s3_reg_gate__9 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[5]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s4_reg[0] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[0]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s4_reg[10] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[10]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s4_reg[11] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[11]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s4_reg[12] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[12]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s4_reg[13] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[13]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s4_reg[14] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[14]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s4_reg[15] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[15]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s4_reg[1] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[1]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s4_reg[2] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[2]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s4_reg[3] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[3]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s4_reg[4] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[4]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s4_reg[5] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[5]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s4_reg[6] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[6]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s4_reg[7] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[7]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s4_reg[8] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[8]_bf1_a_s3_reg_r}
+   UNEXPECTED bf2/a_s4_reg[9] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf2/a_s3_reg[9]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s3_reg_gate (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[15]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s3_reg_gate__0 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[14]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s3_reg_gate__1 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[13]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s3_reg_gate__10 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[4]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s3_reg_gate__11 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[3]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s3_reg_gate__12 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[2]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s3_reg_gate__13 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[1]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s3_reg_gate__14 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[0]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s3_reg_gate__2 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[12]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s3_reg_gate__3 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[11]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s3_reg_gate__4 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[10]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s3_reg_gate__5 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[9]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s3_reg_gate__6 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[8]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s3_reg_gate__7 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[7]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s3_reg_gate__8 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[6]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s3_reg_gate__9 (LUT2): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[5]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s4_reg[0] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[0]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s4_reg[10] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[10]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s4_reg[11] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[11]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s4_reg[12] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[12]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s4_reg[13] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[13]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s4_reg[14] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[14]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s4_reg[15] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[15]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s4_reg[1] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[1]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s4_reg[2] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[2]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s4_reg[3] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[3]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s4_reg[4] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[4]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s4_reg[5] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[5]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s4_reg[6] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[6]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s4_reg[7] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[7]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s4_reg[8] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[8]_bf1_a_s3_reg_r}
+   UNEXPECTED bf3/a_s4_reg[9] (FDRE): domain-0 cells 1, domain-1 cells 1, not read registers: bf1/a_s3_reg_r {bf3/a_s3_reg[9]_bf1_a_s3_reg_r}
+
+Q4 check_timing (verbose) follows.
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
+| Date         : Fri Oct 23 01:09:41 2026
+| Command      : check_timing -verbose -file build/reports/sep_bastion_nodt_4.400.rpt -append
+| Design       : ntt_top
+| Device       : 7a200t-fbg676
+| Speed File   : -2  PRODUCTION 1.23 2018-06-13
+-------------------------------------------------------------------------------------------
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (37)
+6. checking no_output_delay (17)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (37)
+-------------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 37 input ports with no input delay but user has a false path constraint. (MEDIUM)
+
+ext_addr_r[0]
+ext_addr_r[1]
+ext_addr_r[2]
+ext_addr_r[3]
+ext_addr_r[4]
+ext_addr_r[5]
+ext_addr_r[6]
+ext_addr_r[7]
+ext_addr_w[0]
+ext_addr_w[1]
+ext_addr_w[2]
+ext_addr_w[3]
+ext_addr_w[4]
+ext_addr_w[5]
+ext_addr_w[6]
+ext_addr_w[7]
+ext_data_w[0]
+ext_data_w[10]
+ext_data_w[11]
+ext_data_w[12]
+ext_data_w[13]
+ext_data_w[14]
+ext_data_w[15]
+ext_data_w[1]
+ext_data_w[2]
+ext_data_w[3]
+ext_data_w[4]
+ext_data_w[5]
+ext_data_w[6]
+ext_data_w[7]
+ext_data_w[8]
+ext_data_w[9]
+ext_re
+ext_share_sel
+ext_we
+rst
+start
+
+
+6. checking no_output_delay (17)
+--------------------------------
+ There are 0 ports with no output delay specified.
+
+ There are 17 ports with no output delay but user has a false path constraint (MEDIUM)
+
+done
+ext_data_r[0]
+ext_data_r[10]
+ext_data_r[11]
+ext_data_r[12]
+ext_data_r[13]
+ext_data_r[14]
+ext_data_r[15]
+ext_data_r[1]
+ext_data_r[2]
+ext_data_r[3]
+ext_data_r[4]
+ext_data_r[5]
+ext_data_r[6]
+ext_data_r[7]
+ext_data_r[8]
+ext_data_r[9]
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+

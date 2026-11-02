@@ -1,0 +1,43 @@
+c1: 5 pairs, N_max = 2,000
+  t1   detected in 5/5 pairs | N median 400, range 300 to 750 | max|t| median 10.5, range 9.3 to 11.7
+  t2u  detected in 5/5 pairs | N median 1,500, range 1,500 to 2,000 | max|t| median 5.9, range 5.5 to 6.4
+c2: 5 pairs, N_max = 2,000
+  t1   detected in 5/5 pairs | N median 300, range 200 to 300 | max|t| median 13.9, range 13.1 to 14.7
+  t2u  detected in 5/5 pairs | N median 1,500, range 1,000 to 2,000 | max|t| median 6.3, range 5.6 to 7.3
+c3: 5 pairs, N_max = 2,000
+  t1   detected in 5/5 pairs | N median 100, range 100 to 150 | max|t| median 20.6, range 19.6 to 22.0
+  t2u  detected in 5/5 pairs | N median 750, range 750 to 750 | max|t| median 9.1, range 8.5 to 10.5
+baseline_b: 5 pairs, N_max = 2,000
+  t1   detected in 5/5 pairs | N median 25, range 25 to 25 | max|t| median 100.4, range 94.5 to 102.4
+  t2u  detected in 5/5 pairs | N median 25, range 25 to 25 | max|t| median 26.5, range 25.7 to 27.0
+lockstep: 5 pairs, N_max = 100,000
+  t1   detected in 0/5 pairs | N median > 100000, range > 100000 to > 100000 | max|t| median 3.9, range 3.6 to 4.4
+  t2u  detected in 5/5 pairs | N median 2,000, range 2,000 to 3,000 | max|t| median 31.8, range 29.8 to 32.7
+sequential: 5 pairs, N_max = 100,000
+  t1   detected in 0/5 pairs | N median > 100000, range > 100000 to > 100000 | max|t| median 3.9, range 3.6 to 4.3
+  t2u  detected in 0/5 pairs | N median > 100000, range > 100000 to > 100000 | max|t| median 4.1, range 3.7 to 5.1
+  t2b  detected in 5/5 pairs | N median 1,000, range 1,000 to 2,000 | max|t| median 46.9, range 45.6 to 47.4
+staggered_d1: 5 pairs, N_max = 100,000
+  t1   detected in 0/5 pairs | N median > 100000, range > 100000 to > 100000 | max|t| median 3.7, range 3.3 to 4.2
+  t2u  detected in 5/5 pairs | N median 5,000, range 3,000 to 5,000 | max|t| median 25.8, range 25.2 to 27.6
+  t2b  detected in 5/5 pairs | N median 5,000, range 3,000 to 5,000 | max|t| median 24.5, range 23.5 to 26.3
+staggered_d4: 5 pairs, N_max = 100,000
+  t1   detected in 0/5 pairs | N median > 100000, range > 100000 to > 100000 | max|t| median 3.8, range 3.3 to 4.2
+  t2u  detected in 5/5 pairs | N median 20,000, range 10,000 to 20,000 | max|t| median 14.8, range 13.8 to 15.9
+  t2b  detected in 5/5 pairs | N median 3,000, range 1,000 to 5,000 | max|t| median 34.6, range 32.2 to 35.4
+staggered_d9: 5 pairs, N_max = 100,000
+  t1   detected in 0/5 pairs | N median > 100000, range > 100000 to > 100000 | max|t| median 3.7, range 3.5 to 4.6
+  t2u  detected in 5/5 pairs | N median 60,000, range 60,000 to 60,000 | max|t| median 6.5, range 5.6 to 7.0
+  t2b  detected in 5/5 pairs | N median 3,000, range 2,000 to 5,000 | max|t| median 29.1, range 27.3 to 30.6
+staggered_d18: 5 pairs, N_max = 100,000
+  t1   detected in 0/5 pairs | N median > 100000, range > 100000 to > 100000 | max|t| median 4.0, range 3.3 to 4.5
+  t2u  detected in 5/5 pairs | N median 40,000, range 40,000 to 60,000 | max|t| median 7.7, range 7.1 to 8.7
+  t2b  detected in 5/5 pairs | N median 5,000, range 3,000 to 5,000 | max|t| median 26.2, range 24.2 to 27.2
+staggered_d576: 5 pairs, N_max = 100,000
+  t1   detected in 0/5 pairs | N median > 100000, range > 100000 to > 100000 | max|t| median 3.9, range 3.3 to 4.3
+  t2u  detected in 5/5 pairs | N median 7,500, range 5,000 to 20,000 | max|t| median 13.7, range 12.1 to 14.5
+  t2b  detected in 5/5 pairs | N median 3,000, range 2,000 to 5,000 | max|t| median 34.7, range 32.8 to 36.1
+staggered_d4034: 5 pairs, N_max = 100,000
+  t1   detected in 0/5 pairs | N median > 100000, range > 100000 to > 100000 | max|t| median 3.8, range 3.4 to 4.3
+  t2u  detected in 0/5 pairs | N median > 100000, range > 100000 to > 100000 | max|t| median 3.9, range 3.6 to 4.5
+  t2b  detected in 5/5 pairs | N median 1,000, range 500 to 2,000 | max|t| median 46.6, range 44.8 to 47.9

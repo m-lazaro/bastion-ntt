@@ -1,0 +1,34 @@
+nohup: ignoring input
+bastion_seq 5.000 WNS=0.057
+bastion_seq 4.900 WNS=-0.080
+config bastion_seq
+period 5.000
+ CONFIG      : bastion_seq
+ Tclk        : 5.000 ns
+ WNS         : 0.057 ns
+ fmax        : 202.3 MHz   TIMING MET
+ | Slice LUTs              |  338 |     0 |          0 |    134600 |  0.25 |
+ |   LUT as Logic          |  338 |     0 |          0 |    134600 |  0.25 |
+ |   LUT as Memory         |    0 |     0 |          0 |     46200 |  0.00 |
+ | Slice Registers         |  595 |     0 |          0 |    269200 |  0.22 |
+ |   Register as Flip Flop |  595 |     0 |          0 |    269200 |  0.22 |
+ | Slice                                      |  163 |     0 |          0 |     33650 |  0.48 |
+ | LUT as Logic                               |  338 |     0 |          0 |    134600 |  0.25 |
+ | LUT as Memory                              |    0 |     0 |          0 |     46200 |  0.00 |
+ | Slice Registers                            |  595 |     0 |          0 |    269200 |  0.22 |
+ | Block RAM Tile    |  1.5 |     0 |          0 |       365 |  0.41 |
+ | DSPs           |    6 |     0 |          0 |       740 |  0.81 |
+config=baseline_a, period_ns=4.600, wns_ns=0.0, whs_ns=0.05, fmax_mhz=217.4, cycles=8066, latency_us=37.1, luts=150.0, lut_logic=142.0, lut_mem=8.0, ffs=145.0, slices=58.0, dsp=3.0, bram=1.0, atp_lut_us=5566, atp_slice_us=2152, separation=
+    swept: 4.500:-0.144 4.600:+0.000
+config=baseline_b, period_ns=4.500, wns_ns=0.01, whs_ns=0.075, fmax_mhz=222.2, cycles=2306, latency_us=10.38, luts=624.0, lut_logic=592.0, lut_mem=32.0, ffs=479.0, slices=198.0, dsp=12.0, bram=2.5, atp_lut_us=6475, atp_slice_us=2055, separation=
+    swept: 4.400:-0.050 4.500:+0.010
+config=baseline_c, period_ns=4.400, wns_ns=0.021, whs_ns=0.061, fmax_mhz=227.3, cycles=4034, latency_us=17.75, luts=329.0, lut_logic=313.0, lut_mem=16.0, ffs=319.0, slices=105.0, dsp=6.0, bram=1.5, atp_lut_us=5840, atp_slice_us=1864, separation=
+    swept: 4.300:-0.044 4.400:+0.021 4.500:+0.121
+config=bastion, period_ns=5.100, wns_ns=0.017, whs_ns=0.055, fmax_mhz=196.1, cycles=4034, latency_us=20.57, luts=514.0, lut_logic=514.0, lut_mem=0.0, ffs=1037.0, slices=245.0, dsp=12.0, bram=2.5, atp_lut_us=10575, atp_slice_us=5040, separation=domain 0 = 472, domain 1 = 472, outside = 110, total = 1054; Q1 0 paths; Q2 0 paths; Q3 32 expected, 0 unexpected
+    swept: 5.000:-0.108 5.100:+0.017 5.200:+0.059
+config=bastion_nodt, period_ns=4.400, wns_ns=0.031, whs_ns=0.059, fmax_mhz=227.3, cycles=4034, latency_us=17.75, luts=578.0, lut_logic=546.0, lut_mem=32.0, ffs=496.0, slices=195.0, dsp=12.0, bram=2.5, atp_lut_us=10259, atp_slice_us=3461, separation=domain 0 = 187, domain 1 = 184, outside = 206, total = 577; Q1 32 paths; Q2 64 paths; Q3 32 expected, 64 unexpected
+    swept: 4.300:-0.088 4.400:+0.031
+config=bastion_seq, period_ns=5.000, wns_ns=0.057, whs_ns=0.058, fmax_mhz=200.0, cycles=8069, latency_us=40.34, luts=338.0, lut_logic=338.0, lut_mem=0.0, ffs=595.0, slices=163.0, dsp=6.0, bram=1.5, atp_lut_us=13637, atp_slice_us=6576, separation=
+    swept: 4.900:-0.080 5.000:+0.057
+config=bastion_stag, period_ns=5.300, wns_ns=0.262, whs_ns=0.059, fmax_mhz=188.7, cycles=, latency_us=, luts=710.0, lut_logic=710.0, lut_mem=0.0, ffs=1160.0, slices=310.0, dsp=12.0, bram=2.5, atp_lut_us=, atp_slice_us=, separation=domain 0 = 472, domain 1 = 472, outside = 233, total = 1177; Q1 0 paths; Q2 0 paths; Q3 32 expected, 0 unexpected
+    swept: 5.200:-0.065 5.300:+0.262

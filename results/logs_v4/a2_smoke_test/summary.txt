@@ -1,0 +1,43 @@
+c1: 1 pairs, N_max = 200
+  t1   detected in 0/1 pairs | N median > 200, range > 200 to > 200 | max|t| median 4.4, range 4.3 to 4.5
+  t2u  detected in 0/1 pairs | N median > 200, range > 200 to > 200 | max|t| median 4.1, range 3.5 to 4.6
+c2: 1 pairs, N_max = 200
+  t1   detected in 0/1 pairs | N median > 200, range > 200 to > 200 | max|t| median 6.0, range 5.3 to 6.7
+  t2u  detected in 0/1 pairs | N median > 200, range > 200 to > 200 | max|t| median 3.9, range 3.7 to 4.0
+c3: 1 pairs, N_max = 200
+  t1   detected in 1/1 pairs | N median 100, range 100 to 100 | max|t| median 8.3, range 7.9 to 8.7
+  t2u  detected in 0/1 pairs | N median > 200, range > 200 to > 200 | max|t| median 4.1, range 4.0 to 4.1
+baseline_b: 1 pairs, N_max = 200
+  t1   detected in 1/1 pairs | N median 25, range 25 to 25 | max|t| median 31.5, range 30.8 to 32.1
+  t2u  detected in 1/1 pairs | N median 25, range 25 to 25 | max|t| median 10.4, range 10.2 to 10.7
+lockstep: 1 pairs, N_max = 1,000
+  t1   detected in 0/1 pairs | N median > 1000, range > 1000 to > 1000 | max|t| median 3.7, range 3.6 to 3.9
+  t2u  detected in 0/1 pairs | N median > 1000, range > 1000 to > 1000 | max|t| median 4.3, range 3.8 to 4.8
+sequential: 1 pairs, N_max = 1,000
+  t1   detected in 0/1 pairs | N median > 1000, range > 1000 to > 1000 | max|t| median 4.0, range 3.7 to 4.2
+  t2u  detected in 0/1 pairs | N median > 1000, range > 1000 to > 1000 | max|t| median 4.0, range 3.9 to 4.2
+  t2b  detected in 1/1 pairs | N median 1,000, range 1,000 to 1,000 | max|t| median 5.7, range 5.4 to 6.1
+staggered_d1: 1 pairs, N_max = 1,000
+  t1   detected in 0/1 pairs | N median > 1000, range > 1000 to > 1000 | max|t| median 4.1, range 3.8 to 4.3
+  t2u  detected in 0/1 pairs | N median > 1000, range > 1000 to > 1000 | max|t| median 3.9, range 3.7 to 4.1
+  t2b  detected in 0/1 pairs | N median > 1000, range > 1000 to > 1000 | max|t| median 4.0, range 4.0 to 4.1
+staggered_d4: 1 pairs, N_max = 1,000
+  t1   detected in 0/1 pairs | N median > 1000, range > 1000 to > 1000 | max|t| median 4.2, range 3.7 to 4.7
+  t2u  detected in 0/1 pairs | N median > 1000, range > 1000 to > 1000 | max|t| median 4.2, range 3.7 to 4.6
+  t2b  detected in 0/1 pairs | N median > 1000, range > 1000 to > 1000 | max|t| median 4.5, range 4.0 to 4.9
+staggered_d9: 1 pairs, N_max = 1,000
+  t1   detected in 0/1 pairs | N median > 1000, range > 1000 to > 1000 | max|t| median 4.0, range 3.8 to 4.2
+  t2u  detected in 0/1 pairs | N median > 1000, range > 1000 to > 1000 | max|t| median 3.8, range 3.7 to 3.8
+  t2b  detected in 0/1 pairs | N median > 1000, range > 1000 to > 1000 | max|t| median 4.3, range 4.3 to 4.3
+staggered_d18: 1 pairs, N_max = 1,000
+  t1   detected in 0/1 pairs | N median > 1000, range > 1000 to > 1000 | max|t| median 4.0, range 3.7 to 4.3
+  t2u  detected in 0/1 pairs | N median > 1000, range > 1000 to > 1000 | max|t| median 3.4, range 3.2 to 3.5
+  t2b  detected in 0/1 pairs | N median > 1000, range > 1000 to > 1000 | max|t| median 4.0, range 3.9 to 4.0
+staggered_d576: 1 pairs, N_max = 1,000
+  t1   detected in 0/1 pairs | N median > 1000, range > 1000 to > 1000 | max|t| median 4.0, range 4.0 to 4.1
+  t2u  detected in 0/1 pairs | N median > 1000, range > 1000 to > 1000 | max|t| median 4.2, range 4.2 to 4.3
+  t2b  detected in 0/1 pairs | N median > 1000, range > 1000 to > 1000 | max|t| median 4.4, range 4.3 to 4.5
+staggered_d4034: 1 pairs, N_max = 1,000
+  t1   detected in 0/1 pairs | N median > 1000, range > 1000 to > 1000 | max|t| median 4.1, range 3.9 to 4.2
+  t2u  detected in 0/1 pairs | N median > 1000, range > 1000 to > 1000 | max|t| median 3.8, range 3.7 to 4.0
+  t2b  detected in 1/1 pairs | N median 1,000, range 1,000 to 1,000 | max|t| median 5.4, range 5.2 to 5.6

@@ -18,13 +18,14 @@ module tb_ntt_top;
     reg  [7:0]  ext_addr_w;
     reg  signed [15:0] ext_data_w;
     reg  [7:0]  ext_addr_r;
+    reg         ext_re;
     wire signed [15:0] ext_data_r;
 
     ntt_top dut (
         .clk(clk), .rst(rst), .start(start), .done(done),
         .ext_we(ext_we), .ext_share_sel(ext_share_sel),
         .ext_addr_w(ext_addr_w), .ext_data_w(ext_data_w),
-        .ext_addr_r(ext_addr_r), .ext_data_r(ext_data_r)
+        .ext_addr_r(ext_addr_r), .ext_re(ext_re), .ext_data_r(ext_data_r)
     );
 
     initial clk = 0;
@@ -184,6 +185,8 @@ module tb_ntt_top;
                 @(posedge clk);
             end
             ext_we = 0;
+            ext_data_w = 0;   // clear the input bus: no share word may
+            ext_addr_w = 0;   // stay at the write-mux inputs of either domain
             @(posedge clk);
 
             // Load share 1
@@ -195,33 +198,47 @@ module tb_ntt_top;
                 @(posedge clk);
             end
             ext_we = 0;
+            ext_data_w = 0;   // clear the input bus: no share word may
+            ext_addr_w = 0;   // stay at the write-mux inputs of either domain
             ext_share_sel = 0;
             @(posedge clk);
         end
     endtask
 
     // =========================================================
-    // Read both shares from DUT memory (BRAM: 1-cycle latency)
+    // Read both shares (revised read-back: two-cycle latency)
     // =========================================================
+    // Address presented, BRAM output one edge later, per-domain read
+    // register one edge after that. ext_re is dropped for two cycles
+    // between the shares so that both read registers clear to zero
+    // before the other domain is selected.
     task mem_read_shares;
         begin
-            // Read share 0
+            // interface rule: two edges after done before the first read,
+            // so that the last butterfly leaves the pipeline first
+            repeat (2) @(posedge clk);
             ext_share_sel = 0;
+            ext_re = 1;
             for (i = 0; i < 256; i = i+1) begin
                 ext_addr_r = i[7:0];
+                @(posedge clk);
                 @(posedge clk);
                 #1;
                 g_hw_s0[i] = ext_data_r;
             end
-
-            // Read share 1
+            ext_re = 0;
+            repeat(2) @(posedge clk);
             ext_share_sel = 1;
+            ext_re = 1;
             for (i = 0; i < 256; i = i+1) begin
                 ext_addr_r = i[7:0];
+                @(posedge clk);
                 @(posedge clk);
                 #1;
                 g_hw_s1[i] = ext_data_r;
             end
+            ext_re = 0;
+            repeat(2) @(posedge clk);
             ext_share_sel = 0;
         end
     endtask
@@ -233,11 +250,14 @@ module tb_ntt_top;
         integer tout;
         begin
             ext_we = 0;
-            @(posedge clk); start <= 1; cycle_start = cycle_ctr;
+            // Latency = clock edges from the cycle in which start is high to
+            // the edge that raises done. Sampling 1 ns after each edge makes
+            // the count independent of simulator event ordering.
+            @(posedge clk); start <= 1;
             @(posedge clk); start <= 0;
-            tout = 0;
-            while (!done && tout < 200000) begin @(posedge clk); tout=tout+1; end
-            cycle_end = cycle_ctr;
+            #1; tout = 1;
+            while (!done && tout < 200000) begin @(posedge clk); #1; tout = tout + 1; end
+            cycle_start = 0; cycle_end = tout;
             if (tout >= 200000) begin $display("[TIMEOUT]"); $finish; end
             @(posedge clk);
         end
@@ -277,7 +297,7 @@ module tb_ntt_top;
     task do_reset;
         begin
             rst=1; start=0;
-            ext_we=0; ext_share_sel=0; ext_addr_w=0; ext_data_w=0; ext_addr_r=0;
+            ext_we=0; ext_share_sel=0; ext_addr_w=0; ext_data_w=0; ext_addr_r=0; ext_re=0;
             repeat(4) @(posedge clk);
             rst=0;
             repeat(2) @(posedge clk);
@@ -346,8 +366,16 @@ module tb_ntt_top;
 
         // T6: KAT vector
         $display("\n=== T6: KAT vector (masked) ===");
+             for (i = 0; i < 256; i = i + 1) begin
+            g_in[i]  = 16'bx;
+            g_ref[i] = 16'bx;
+        end
         $readmemh("kat_input.hex", g_in);
         $readmemh("kat_expected.hex", g_ref);
+        if (g_in[0] === 16'bx || g_ref[0] === 16'bx) begin
+            $display("[FATAL] KAT vectors not loaded (kat_input.hex / kat_expected.hex missing).");
+            $finish;
+        end
         do_reset;
         generate_shares;
         mem_load_shares;

@@ -1,0 +1,17 @@
+config bastion_seq
+period 5.000
+ CONFIG      : bastion_seq
+ Tclk        : 5.000 ns
+ WNS         : 0.057 ns
+ fmax        : 202.3 MHz   TIMING MET
+ | Slice LUTs              |  338 |     0 |          0 |    134600 |  0.25 |
+ |   LUT as Logic          |  338 |     0 |          0 |    134600 |  0.25 |
+ |   LUT as Memory         |    0 |     0 |          0 |     46200 |  0.00 |
+ | Slice Registers         |  595 |     0 |          0 |    269200 |  0.22 |
+ |   Register as Flip Flop |  595 |     0 |          0 |    269200 |  0.22 |
+ | Slice                                      |  163 |     0 |          0 |     33650 |  0.48 |
+ | LUT as Logic                               |  338 |     0 |          0 |    134600 |  0.25 |
+ | LUT as Memory                              |    0 |     0 |          0 |     46200 |  0.00 |
+ | Slice Registers                            |  595 |     0 |          0 |    269200 |  0.22 |
+ | Block RAM Tile    |  1.5 |     0 |          0 |       365 |  0.41 |
+ | DSPs           |    6 |     0 |          0 |       740 |  0.81 |

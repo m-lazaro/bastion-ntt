@@ -1,91 +1,33 @@
-# === Simulación Verilog ===
-*.vcd
-*.fst
-*.lxt
-*.lxt2
-sim_*
-!sim_*.sh
-*.vvp
-*.out
-
-# === Vivado ===
+# Vivado build output
+build/
 *.jou
 *.log
-*.str
-*.pb
-*.wdb
-*.html
-*.xml
-*.dcp
-*.bit
-*.ltx
+*.backup.*
 .Xil/
-*.cache/
-*.hw/
-*.ip_user_files/
-*.runs/
-*.sim/
-*.srcs/
-vivado*.log
-vivado*.jou
-hs_err_*.log
+vivado*.str
+usage_statistics_webtalk.*
 
-# === Python ===
+# Icarus / simulation artifacts
+sim_ntt
+sim_tvla
+sim_parallel
+sim_check
+*.vcd
+*.wdb
+xsim.dir/
+xsim.jou
+xsim.log
+x*.pb
+
+# TVLA raw traces (regenerable; never committed — see tvla/results/ for the
+# sufficient-statistics CSVs that reproduce the figures)
+tvla_traces*.csv
+tvla_partial_*.csv
+
+# Python
 __pycache__/
-*.py[cod]
-*$py.class
-*.egg-info/
-.pytest_cache/
-.venv/
-venv/
+*.pyc
 
-# === TVLA outputs (regenerables) ===
-tvla_traces.csv
-tvla_tvalues_*.csv
-tvla_evolution.csv
-tvla_evolution.pdf
-tvla_evolution.png
-tvla_plot.png
-tvla_plot.pdf
-
-# === Sistema ===
-.DS_Store
-Thumbs.db
-*~
-.swp
-.swo
-
-# === IDEs ===
-.vscode/
-.idea/
-*.code-workspace
-
-# === LaTeX ===
-*.aux
-*.bbl
-*.blg
-*.toc
-*.synctex.gz
-*.fdb_latexmk
-*.fls
-
-# === Vivado xsim working dir (en cualquier subruta) ===
-**/xsim.dir/
-**/*.wdb
-**/*.pb
-# === Netlists de timing (se regeneran) ===
-**/netlist_timesim.*
-# === Campaña paralela (logs y binarios) ===
-**/job_*.log
-**/campaign.log
-**/check.log
-**/seeds.txt
-# === Trazas crudas grandes (se regeneran) ===
-**/tvla_traces*.csv
-
-
-# Excepción: los t-values finales sí van al repo (pequeños, reproducen las figuras)
-!**/tvla_tvalues_s0_RTL30k_v3.csv
-!**/tvla_tvalues_s1_RTL30k_v3.csv
-!**/tvla_tvalues_s0_merged.csv
-!**/tvla_tvalues_s1_merged.csv
+# KAT vectors copied into RTL dirs at sim time (canonical copy lives in kat/)
+rtl/*/kat_input.hex
+rtl/*/kat_expected.hex
