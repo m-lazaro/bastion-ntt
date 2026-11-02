@@ -12,6 +12,9 @@
 //
 // Normal mode (len >= 4): BFU_k uses bank k exclusively
 // Crossbar mode (len = 2): BFU0 uses bank0+bank2, BFU1 uses bank1+bank3
+//
+// INTERFACE: read back only after done and two further clock edges,
+// the read rule of every core in this repository (see README.md).
 // =============================================================
 module ntt_top (
     input  wire        clk,

@@ -6,6 +6,9 @@
 //   - During NTT WRITE: port A = ctrl_write_a, port B = ctrl_write_b
 //   - During ext write: port A = ext_addr_w
 //   - During ext read:  port A = ext_addr_r
+//
+// INTERFACE: read back only after done and two further clock edges,
+// the read rule of every core in this repository (see README.md).
 // =============================================================
 module ntt_top (
     input  wire        clk,
