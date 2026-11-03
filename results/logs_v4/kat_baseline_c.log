@@ -1,0 +1,25 @@
+VCD info: dumpfile tb_ntt_top.vcd opened for output.
+
+=== T1: All-zero (baseline C) ===
+[PASS]                        NTT(zero)  cycles=4034  (baseline C)
+
+=== T2: e_0 (baseline C) ===
+[PASS]                         NTT(e_0)  cycles=4034  (baseline C)
+
+=== T3: All-ones (baseline C) ===
+[PASS]                    NTT(all_ones)  cycles=4034  (baseline C)
+
+=== T4: Alternating (baseline C) ===
+[PASS]                     NTT(alt+1-1)  cycles=4034  (baseline C)
+
+=== T5: Max coefficient (baseline C) ===
+[PASS]                   NTT(max_coeff)  cycles=4034  (baseline C)
+
+=== T6: KAT vector (baseline C) ===
+[PASS]                  NTT(kat_vector)  cycles=4034  (baseline C)
+
+========================================
+  PASS : 6  FAIL : 0
+  STATUS: ALL PASS - Baseline C Kyber-512 NTT
+========================================
+tb_ntt_top.v:350: $finish called at 288895000 (1ps)

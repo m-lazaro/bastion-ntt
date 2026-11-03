@@ -1,0 +1,26 @@
+VCD info: dumpfile tb_ntt_top.vcd opened for output.
+
+=== T1: All-zero (masked) ===
+[PASS]                        NTT(zero)  cycles=4034  (masked)
+
+=== T2: e_0 (masked) ===
+[PASS]                         NTT(e_0)  cycles=4034  (masked)
+
+=== T3: All-ones (masked) ===
+[PASS]                    NTT(all_ones)  cycles=4034  (masked)
+
+=== T4: Alternating (masked) ===
+[PASS]                     NTT(alt+1-1)  cycles=4034  (masked)
+
+=== T5: Max coefficient (masked) ===
+[PASS]                   NTT(max_coeff)  cycles=4034  (masked)
+
+=== T6: KAT vector (masked) ===
+[PASS]                  NTT(kat_vector)  cycles=4034  (masked)
+
+========================================
+  PASS : 6  FAIL : 0
+  STATUS: ALL PASS - Masked Kyber-512 NTT
+========================================
+tb_ntt_top.v:393: $finish called at 335155000 (1ps)
+CHECK READBACK: both=0 early=0 direct=0 loaded=6144

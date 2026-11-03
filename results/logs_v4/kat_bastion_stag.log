@@ -1,0 +1,104 @@
+
+=== delta=1, leading domain=0 ===
+[PASS]                        NTT(zero)  cycles=4035  delta=1 lead=0
+[PASS]                         NTT(e_0)  cycles=4035  delta=1 lead=0
+[PASS]                    NTT(all_ones)  cycles=4035  delta=1 lead=0
+[PASS]                     NTT(alt+1-1)  cycles=4035  delta=1 lead=0
+[PASS]                   NTT(max_coeff)  cycles=4035  delta=1 lead=0
+[PASS]                  NTT(kat_vector)  cycles=4035  delta=1 lead=0
+
+=== delta=1, leading domain=1 ===
+[PASS]                        NTT(zero)  cycles=4035  delta=1 lead=1
+[PASS]                         NTT(e_0)  cycles=4035  delta=1 lead=1
+[PASS]                    NTT(all_ones)  cycles=4035  delta=1 lead=1
+[PASS]                     NTT(alt+1-1)  cycles=4035  delta=1 lead=1
+[PASS]                   NTT(max_coeff)  cycles=4035  delta=1 lead=1
+[PASS]                  NTT(kat_vector)  cycles=4035  delta=1 lead=1
+
+=== delta=4, leading domain=0 ===
+[PASS]                        NTT(zero)  cycles=4038  delta=4 lead=0
+[PASS]                         NTT(e_0)  cycles=4038  delta=4 lead=0
+[PASS]                    NTT(all_ones)  cycles=4038  delta=4 lead=0
+[PASS]                     NTT(alt+1-1)  cycles=4038  delta=4 lead=0
+[PASS]                   NTT(max_coeff)  cycles=4038  delta=4 lead=0
+[PASS]                  NTT(kat_vector)  cycles=4038  delta=4 lead=0
+
+=== delta=4, leading domain=1 ===
+[PASS]                        NTT(zero)  cycles=4038  delta=4 lead=1
+[PASS]                         NTT(e_0)  cycles=4038  delta=4 lead=1
+[PASS]                    NTT(all_ones)  cycles=4038  delta=4 lead=1
+[PASS]                     NTT(alt+1-1)  cycles=4038  delta=4 lead=1
+[PASS]                   NTT(max_coeff)  cycles=4038  delta=4 lead=1
+[PASS]                  NTT(kat_vector)  cycles=4038  delta=4 lead=1
+
+=== delta=9, leading domain=0 ===
+[PASS]                        NTT(zero)  cycles=4043  delta=9 lead=0
+[PASS]                         NTT(e_0)  cycles=4043  delta=9 lead=0
+[PASS]                    NTT(all_ones)  cycles=4043  delta=9 lead=0
+[PASS]                     NTT(alt+1-1)  cycles=4043  delta=9 lead=0
+[PASS]                   NTT(max_coeff)  cycles=4043  delta=9 lead=0
+[PASS]                  NTT(kat_vector)  cycles=4043  delta=9 lead=0
+
+=== delta=9, leading domain=1 ===
+[PASS]                        NTT(zero)  cycles=4043  delta=9 lead=1
+[PASS]                         NTT(e_0)  cycles=4043  delta=9 lead=1
+[PASS]                    NTT(all_ones)  cycles=4043  delta=9 lead=1
+[PASS]                     NTT(alt+1-1)  cycles=4043  delta=9 lead=1
+[PASS]                   NTT(max_coeff)  cycles=4043  delta=9 lead=1
+[PASS]                  NTT(kat_vector)  cycles=4043  delta=9 lead=1
+
+=== delta=18, leading domain=0 ===
+[PASS]                        NTT(zero)  cycles=4052  delta=18 lead=0
+[PASS]                         NTT(e_0)  cycles=4052  delta=18 lead=0
+[PASS]                    NTT(all_ones)  cycles=4052  delta=18 lead=0
+[PASS]                     NTT(alt+1-1)  cycles=4052  delta=18 lead=0
+[PASS]                   NTT(max_coeff)  cycles=4052  delta=18 lead=0
+[PASS]                  NTT(kat_vector)  cycles=4052  delta=18 lead=0
+
+=== delta=18, leading domain=1 ===
+[PASS]                        NTT(zero)  cycles=4052  delta=18 lead=1
+[PASS]                         NTT(e_0)  cycles=4052  delta=18 lead=1
+[PASS]                    NTT(all_ones)  cycles=4052  delta=18 lead=1
+[PASS]                     NTT(alt+1-1)  cycles=4052  delta=18 lead=1
+[PASS]                   NTT(max_coeff)  cycles=4052  delta=18 lead=1
+[PASS]                  NTT(kat_vector)  cycles=4052  delta=18 lead=1
+
+=== delta=576, leading domain=0 ===
+[PASS]                        NTT(zero)  cycles=4610  delta=576 lead=0
+[PASS]                         NTT(e_0)  cycles=4610  delta=576 lead=0
+[PASS]                    NTT(all_ones)  cycles=4610  delta=576 lead=0
+[PASS]                     NTT(alt+1-1)  cycles=4610  delta=576 lead=0
+[PASS]                   NTT(max_coeff)  cycles=4610  delta=576 lead=0
+[PASS]                  NTT(kat_vector)  cycles=4610  delta=576 lead=0
+
+=== delta=576, leading domain=1 ===
+[PASS]                        NTT(zero)  cycles=4610  delta=576 lead=1
+[PASS]                         NTT(e_0)  cycles=4610  delta=576 lead=1
+[PASS]                    NTT(all_ones)  cycles=4610  delta=576 lead=1
+[PASS]                     NTT(alt+1-1)  cycles=4610  delta=576 lead=1
+[PASS]                   NTT(max_coeff)  cycles=4610  delta=576 lead=1
+[PASS]                  NTT(kat_vector)  cycles=4610  delta=576 lead=1
+
+=== delta=4034, leading domain=0 ===
+[PASS]                        NTT(zero)  cycles=8068  delta=4034 lead=0
+[PASS]                         NTT(e_0)  cycles=8068  delta=4034 lead=0
+[PASS]                    NTT(all_ones)  cycles=8068  delta=4034 lead=0
+[PASS]                     NTT(alt+1-1)  cycles=8068  delta=4034 lead=0
+[PASS]                   NTT(max_coeff)  cycles=8068  delta=4034 lead=0
+[PASS]                  NTT(kat_vector)  cycles=8068  delta=4034 lead=0
+
+=== delta=4034, leading domain=1 ===
+[PASS]                        NTT(zero)  cycles=8068  delta=4034 lead=1
+[PASS]                         NTT(e_0)  cycles=8068  delta=4034 lead=1
+[PASS]                    NTT(all_ones)  cycles=8068  delta=4034 lead=1
+[PASS]                     NTT(alt+1-1)  cycles=8068  delta=4034 lead=1
+[PASS]                   NTT(max_coeff)  cycles=8068  delta=4034 lead=1
+[PASS]                  NTT(kat_vector)  cycles=8068  delta=4034 lead=1
+
+========================================
+  PASS : 72  FAIL : 0  CYCLE MISMATCHES : 0
+  STATUS: ALL PASS - Masked Kyber-512 NTT, staggered
+========================================
+tb_ntt_top.v:385: $finish called at 4578955000 (1ps)
+CHECK STAGGER: cycles compared=290448 mismatches=0 lead-bit errors=0
+CHECK READBACK: both=0 early=0 direct=0 loaded=73728

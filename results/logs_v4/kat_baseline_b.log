@@ -1,0 +1,25 @@
+VCD info: dumpfile tb_ntt_top.vcd opened for output.
+
+=== T1: All-zero ===
+[PASS]                        NTT(zero)  cycles=2306
+
+=== T2: e_0 ===
+[PASS]                         NTT(e_0)  cycles=2306
+
+=== T3: All-ones ===
+[PASS]                    NTT(all_ones)  cycles=2306
+
+=== T4: Alternating ===
+[PASS]                     NTT(alt+1-1)  cycles=2306
+
+=== T5: Max coefficient ===
+[PASS]                   NTT(max_coeff)  cycles=2306
+
+=== T6: KAT vector ===
+[PASS]                  NTT(kat_vector)  cycles=2306
+
+========================================
+  PASS : 6  FAIL : 0
+  STATUS: ALL PASS - Kyber-512 Compliant
+========================================
+tb_ntt_top.v:243: $finish called at 169736000 (1ps)

@@ -1,0 +1,25 @@
+
+=== T1: All-zero (masked) ===
+[PASS]                        NTT(zero)  cycles=8069  (masked, sequential)
+
+=== T2: e_0 (masked) ===
+[PASS]                         NTT(e_0)  cycles=8069  (masked, sequential)
+
+=== T3: All-ones (masked) ===
+[PASS]                    NTT(all_ones)  cycles=8069  (masked, sequential)
+
+=== T4: Alternating (masked) ===
+[PASS]                     NTT(alt+1-1)  cycles=8069  (masked, sequential)
+
+=== T5: Max coefficient (masked) ===
+[PASS]                   NTT(max_coeff)  cycles=8069  (masked, sequential)
+
+=== T6: KAT vector (masked) ===
+[PASS]                  NTT(kat_vector)  cycles=8069  (masked, sequential)
+
+========================================
+  PASS : 6  FAIL : 0
+  STATUS: ALL PASS - Masked Kyber-512 NTT, sequential
+========================================
+tb_ntt_top.v:395: $finish called at 577255000 (1ps)
+CHECK SEQ: replay cycles compared=24192 mismatches=0 | latch violations=0 | read-register violations=0
