@@ -11,4 +11,5 @@ authors:
     given-names: "Marcos"
     affiliation: "Universidad Politécnica de Madrid"
 license: Apache-2.0
+doi: 10.5281/zenodo.23956329
 repository-code: "https://github.com/m-lazaro/bastion-ntt"

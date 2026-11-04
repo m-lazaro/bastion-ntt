@@ -3,6 +3,7 @@
 **Share schedules for a first-order masked ML-KEM NTT on FPGA**
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23956329.svg)](https://doi.org/10.5281/zenodo.23956329)
 
 This repository is the artifact for **BASTION**, a first-order
 arithmetic-masked Number Theoretic Transform (NTT) core for ML-KEM (FIPS 203)
@@ -14,6 +15,9 @@ carry only public data.
 The repository also contains three unmasked reference configurations used to
 separate the cost of masking from that of parallelisation (Baselines A, B
 and C).
+
+The version used in the paper, v4.1, is archived on Zenodo:
+https://doi.org/10.5281/zenodo.23956329
 
 ## Status of this revision
 
