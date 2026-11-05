@@ -10,6 +10,19 @@ authors:
   - family-names: "Lázaro Díaz"
     given-names: "Marcos"
     affiliation: "Universidad Politécnica de Madrid"
+    orcid: "https://orcid.org/0009-0008-7805-7302"
 license: Apache-2.0
 doi: 10.5281/zenodo.23956329
 repository-code: "https://github.com/m-lazaro/bastion-ntt"
+preferred-citation:
+  type: article
+  title: "BASTION: Lock-Step, Staggered and Sequential Share Schedules for a First-Order Masked ML-KEM NTT on FPGA"
+  authors:
+    - family-names: "Lázaro Díaz"
+      given-names: "Marcos"
+      affiliation: "Universidad Politécnica de Madrid"
+      orcid: "https://orcid.org/0009-0008-7805-7302"
+  journal: "IACR Cryptology ePrint Archive"
+  issue: "2026/2765"
+  year: 2026
+  url: "https://eprint.iacr.org/2026/2765"
